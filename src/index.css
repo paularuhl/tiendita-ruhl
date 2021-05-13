@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  background: coral;
+  font-size: 20px;
+
+}
+.dropDown{
+  font-weight: bold;
+}
+
+.dropItem{
+  padding: 2px;
+  background-color: white;
+  font-weight: normal;
+}
+
+p{
+  font-size: 20px;
+}
