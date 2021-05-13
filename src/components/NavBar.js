@@ -5,7 +5,7 @@ const NavBar = () => {
     return(
         <Navbar className="navbar" fixed="top">
             <Navbar.Brand href="#index">      
-                <h1>✨Ruhl's Top Five✨</h1>
+                <h1>✨Ruhl's Curated Music Store✨</h1>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-start text-grey">
@@ -25,7 +25,6 @@ const NavBar = () => {
                      <a href="#"><p  className="dropItem" >Of Beauty and Rage - Red</p></a>
                      <a href="#"><p  className="dropItem" >Riot - Paramore </p></a>
                 </NavDropdown>
-                
             </Nav>
             </Navbar.Collapse>
         </Navbar>
