@@ -33,19 +33,21 @@ p{
 }
 .cart {
   min-width: 100px;
+  height: 100%;
   background: rgb(105, 74, 192);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
 }
 
-.cart span {
-/* TODO: no se muestra el icon wtf */
+.cartIcon {
+  font-size: 20px;
+  padding: 0 4px 0 0;
 }
 
-a{
-  text-decoration:none;
+p a{
+  text-decoration:none !important;
+  color: rgb(92, 49, 105) !important;
 }
-
-/* 
-a p{
-  padding: 25px 5px 5px 10px;
-} */

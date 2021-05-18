@@ -11,11 +11,11 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center text-grey">
                 <Nav className="mr-5">
-                        <a href="#"><p className="dropItem text-decoration: none;" >Bands</p></a>
-                        <a href="#"><p className="dropItem text-decoration: none;" >Albums</p></a>
-                        <a href="#"><p className="dropItem text-decoration: none;" >Music Videos</p></a>
-                        <a href="#"><p className="dropItem text-decoration: none;" >Singles</p></a>
-                        <a href="#"><p className="dropItem text-decoration: none;" >Related Stuff</p></a>
+                        <p className="dropItem" > <a href="#">Bands </a></p>
+                        <p className="dropItem" > <a href="#">Albums </a></p>
+                        <p className="dropItem" > <a href="#">Music Videos </a></p>
+                        <p className="dropItem" > <a href="#">Singles </a></p>
+                        <p className="dropItem" > <a href="#">Related Stuff </a></p>
                 </Nav>
             </Navbar.Collapse>
             <CartWidget />
