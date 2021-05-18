@@ -13,7 +13,7 @@ code {
 }
 
 .navbar {
-  background: coral;
+  background: rgb(152, 128, 216);
   font-size: 20px;
 
 }
@@ -23,10 +23,29 @@ code {
 
 .dropItem{
   padding: 2px;
-  background-color: white;
   font-weight: normal;
+  text-decoration:none;
+
 }
 
 p{
   font-size: 20px;
 }
+.cart {
+  min-width: 100px;
+  background: rgb(105, 74, 192);
+  cursor: pointer;
+}
+
+.cart span {
+/* TODO: no se muestra el icon wtf */
+}
+
+a{
+  text-decoration:none;
+}
+
+/* 
+a p{
+  padding: 25px 5px 5px 10px;
+} */
