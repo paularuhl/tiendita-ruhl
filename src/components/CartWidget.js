@@ -1,13 +1,13 @@
 import React from 'react';
 
-const CartWidget = () => {
+const CartWidget = ({cantidadItems}) => {
+    cantidadItems = 1;
     return (
         <div className="cart">
         <div className="d-flex">
-            <i class="fas fa-shopping-cart"></i>
-        </div>
-        <div className="d-flex justify-content-center">
-            <span className="">3</span>
+           Carrito 
+        <i class="fas fa-shopping-cart"></i>
+        {cantidadItems}
         </div>
     </div>
         );
