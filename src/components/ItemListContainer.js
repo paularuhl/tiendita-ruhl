@@ -12,9 +12,9 @@ const ItemListContainer = ({ greeting }) => {
     let stock = 5;
     let initialQuantity = 1;
 
-    const addItems = (items) => {
+    const addItems = (items, ok = true) => {
 
-       items ? changeMessage(`Se agregaron ${items} productos al carrito`) : changeMessage("No hay stock para agregar esa cantidad...");
+       ok ? changeMessage(`Se agregaron ${items} productos al carrito`) : changeMessage(`No puede agregarse esa cantidad. Stock disponible: ${items}. Verificar.`);
     }
 
     return (
