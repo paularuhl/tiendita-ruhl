@@ -5,15 +5,11 @@ import { faMinusCircle, faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 const ItemCount = ({ stock, initial, onAdd, message }) => {
 
     const [quantity, setQuantity] = useState(initial);
-    const [currentStock, setCurrentStock] = useState(stock);
 
     const changeQuantity = (value) => {
+        if(quantity + value <= stock && 0 <= quantity + value)
         setQuantity(quantity + value);
     };
-
-    const canAdd = () => {
-       return quantity <= currentStock && quantity >= 0;
-    }
 
     return (
         <div className="container text-center itemCount">
@@ -28,12 +24,7 @@ const ItemCount = ({ stock, initial, onAdd, message }) => {
                 </button>
             </div>
             <button className="btn addToCart"
-                onClick={() => {
-                    if (canAdd()) {
-                        onAdd(quantity);
-                        setCurrentStock(currentStock - quantity);
-                    } else onAdd(currentStock, false);
-                }}> Agregar al carrito
+                onClick={() => onAdd(quantity)}> Agregar al carrito
             </button>
             <p>
                 {message}
