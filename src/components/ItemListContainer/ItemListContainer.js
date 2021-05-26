@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import ItemList from './ItemList';
-import MockProducts from "../mockProducts";
+import ItemList from '../ItemList/ItemList';
+import MockProducts from "../../mockProducts";
 
 const listProducts = new Promise (
     (result, reject) => setTimeout(() => result(MockProducts), 2000)

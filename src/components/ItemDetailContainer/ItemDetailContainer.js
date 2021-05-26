@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ItemDetailContainer.scss';
-import ItemDetail from './ItemDetail';
-import MockProducts from "../mockProducts";
+import ItemDetail from '../ItemDetail/ItemDetail';
+import MockProducts from "../../mockProducts";
 
 const getItems = new Promise (
     (result, reject) => setTimeout(() => result(MockProducts), 2000)

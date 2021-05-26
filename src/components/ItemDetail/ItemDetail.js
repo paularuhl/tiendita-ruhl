@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ItemCount from './ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.scss';
 
 const ItemDetail = ({ item }) => {

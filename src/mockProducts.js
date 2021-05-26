@@ -3,7 +3,7 @@ import someoneElseCover from './img/lydia_I_was_someone_else.jpg';
 import secretsCover from './img/normandie_dark_and_beautiful_secrets.jpg';
 import amorphousCover from './img/icon_for_hire_amorphous.jpg';
 
-const mockProducts = [
+const MockProducts = [
     {
         id: 1,
         title: "Periphery IV: Hail Stan",
@@ -34,4 +34,4 @@ const mockProducts = [
     }
 ]
 
-export default mockProducts;
+export default MockProducts;
