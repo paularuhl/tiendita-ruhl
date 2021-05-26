@@ -1,0 +1,19 @@
+.navbar {
+    background: rgb(152, 128, 216);
+    font-size: 20px;
+    h4{
+        padding: 0px 15px 0;
+    }
+    p{
+        border: solid 1px black;
+        font-size: 25px;
+        padding: 2px 15px;
+        margin: 5px;
+        border-radius: 10px;
+        font-weight: normal;
+        a{
+            text-decoration: none;
+            color: rgb(92, 49, 105);
+        }
+    }
+}

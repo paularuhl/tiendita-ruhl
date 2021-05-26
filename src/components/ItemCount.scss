@@ -1,0 +1,23 @@
+.itemCount{
+    border: 1px black solid;
+    border-radius: 10px;
+    // margin: 20px;
+    width: 50%;
+    display: block;
+    text-align: center;
+    .itemControls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            padding: 0 30px 0 30px;
+          }
+        button {
+            border-radius: 5px;
+        }
+      }
+    .btn {
+      color: white;
+      background-color: rgb(121, 59, 93) !important;
+    }
+}

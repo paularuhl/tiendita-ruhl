@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar'
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <br/>
       <br/>
       <ItemListContainer greeting="✨Welcome to my curated Music Store✨"/>
-
+      <ItemDetailContainer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusCircle, faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+import './ItemCount.scss'
 
 const ItemCount = ({ stock, initial, onAdd, message }) => {
 
@@ -12,18 +13,19 @@ const ItemCount = ({ stock, initial, onAdd, message }) => {
     };
 
     return (
-        <div className="container text-center itemCount">
-            <div className="container itemControls" >
-                <button className="btnCounter" onClick={() => changeQuantity(-1)}>
+        <div className="itemCount">
+            <div className="itemControls" >
+                <button onClick={() => changeQuantity(-1)}>
                     <FontAwesomeIcon icon={faMinusCircle} />
                 </button>
-                <h1 className="quantity">{quantity}
+                <h1>
+                    {quantity}
                 </h1>
-                <button className="btnCounter" onClick={() => changeQuantity(+1)}>
+                <button onClick={() => changeQuantity(+1)}>
                     <FontAwesomeIcon icon={faPlusCircle} />
                 </button>
             </div>
-            <button className="btn addToCart"
+            <button className="btn"
                 onClick={() => onAdd(quantity)}> Agregar al carrito
             </button>
             <p>
