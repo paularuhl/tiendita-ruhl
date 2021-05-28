@@ -11,7 +11,7 @@ const ItemList = ({ list, type }) => {
             <ul >
                 {type === 'bands' ?
                     list.map(item => <li key={item.id}><BandDetail item={item} /></li>)
-                    : list.map(item => <li key={item.id}><NavLink to={`/item/${item.id}`}><Item item={item} /></NavLink></li>)}
+                    : list.map(item => <li key={item.id}><NavLink to={`/item/${item.id}`} className="link"><Item item={item} /></NavLink></li>)}
             </ul>
         </div>
     );

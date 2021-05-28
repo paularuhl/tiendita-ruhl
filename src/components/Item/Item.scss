@@ -29,3 +29,7 @@
         width: calc(100% * (1/4) - 10px - 1px);
     }
 }
+
+.item-card:hover{
+    background: rgb(253, 187, 223);
+}
