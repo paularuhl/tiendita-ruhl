@@ -1,19 +1,28 @@
 .navbar {
-    background: rgb(152, 128, 216);
+    background: rgb(245, 154, 204);
     font-size: 20px;
-    h4{
-        padding: 0px 15px 0;
+    height: 75px;
+    display: flex;
+    h3{
+        padding: 30px 15px 0;
     }
     p{
         border: solid 1px black;
-        font-size: 25px;
+        font-size: 1em;
         padding: 2px 15px;
         margin: 5px;
         border-radius: 10px;
         font-weight: normal;
-        a{
-            text-decoration: none;
-            color: rgb(92, 49, 105);
-        }
+    }
+    a{
+        text-decoration: none;
+        color:rgb(58, 17, 39);
+    }
+    a:hover{
+        color:rgb(255, 255, 255);
+    }
+    link:hover{
+        border-bottom: 1px solid rgb(58, 17, 39);
+        color:rgb(255, 255, 255);
     }
 }

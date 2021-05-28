@@ -13,8 +13,8 @@ const ItemCount = ({ stock, initial, onAdd, message }) => {
     };
 
     return (
-        <div className="itemCount">
-            <div className="itemControls" >
+        <div className='itemCount'>
+            <div className='itemControls' >
                 <button onClick={() => changeQuantity(-1)}>
                     <FontAwesomeIcon icon={faMinusCircle} />
                 </button>
@@ -25,7 +25,7 @@ const ItemCount = ({ stock, initial, onAdd, message }) => {
                     <FontAwesomeIcon icon={faPlusCircle} />
                 </button>
             </div>
-            <button className="btn"
+            <button className='btn'
                 onClick={() => onAdd(quantity)}> Agregar al carrito
             </button>
             <p>

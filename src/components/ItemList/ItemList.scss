@@ -2,9 +2,7 @@ ul{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    li{
-        padding: 10px;
-        flex-grow: 1;
-        width: calc(100% * (1/2) - 10px - 1px);
-        }
+    a{
+        text-decoration: none;
+    }
 }

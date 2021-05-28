@@ -1,16 +1,16 @@
 import React from 'react';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar'
+import { BrowserRouter } from 'react-router-dom'
+
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-      <br/>
-      <br/>
-      <br/>
-      <ItemListContainer greeting="✨Welcome to my curated Music Store✨"/>
-      <ItemDetailContainer />
+
+    <div className='App'>
+    <BrowserRouter>
+        <NavBar />
+        <Home />
+    </BrowserRouter>
     </div>
   );
 }

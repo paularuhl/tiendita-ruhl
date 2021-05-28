@@ -1,24 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
-import MockProducts from "../../mockProducts";
+import MockProducts from '../../mockProducts';
+import MockBandInfo from '../../mockBandInfo';
+import spinnerGif from '../../img/spinner.gif';
 
-const listProducts = new Promise (
-    (result, reject) => setTimeout(() => result(MockProducts), 2000)
-
+const listItems = (type) => new Promise (
+    (result, reject) => setTimeout(() => result(type === 'bands' ? MockBandInfo : MockProducts), 2000)
 );
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ type }) => {
     
-    let [productos, setProductos] = useState([]);
+    const [items, setItems] = useState([]);
+    const [spinner, setSpinner] = useState([false]);
 
     useEffect(() => {
-        listProducts.then(setProductos)
+        setSpinner(true);
+        listItems(type).then((result) => { 
+            setItems(result);
+            setSpinner(false);
+        });
     }, [])
 
     return (
-        <div className="text-center">
-            <h1 > {greeting} </h1>
-            <ItemList list={productos} />
+        <div className='text-center'>
+           {spinner ? <img src={spinnerGif} /> :  <ItemList list={items} type={type}/>}
         </div>
     );
 }

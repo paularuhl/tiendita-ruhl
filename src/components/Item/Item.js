@@ -3,11 +3,13 @@ import './Item.scss';
 
 const Item = ({ item }) => {
     return (
-        <div className="item-card"> 
-            <h5>{item.title} <span>${item.price}</span></h5>
-            <p>{item.description}</p>
-            <img src={item.pictureUrl} width="100" alt={`Album cover of ${item.title}`}/>
-        </div>
+        <li>
+            <div className='item-card'>
+                <img src={item.pictureUrl} width='100' alt={`Album cover of ${item.title}`} />
+                <h6>{item.title} <span>${item.price}</span></h6>
+                <p>{item.description}</p>
+            </div>
+        </li>
     );
 }
 
