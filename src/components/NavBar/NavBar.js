@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
@@ -6,11 +6,11 @@ import './NavBar.scss';
 
 const NavBar = () => {
 
-    const [categories, setCategories] = useState([
+    const categories = [
         { name: 'Music', uri: '/' },
         { name: 'About The Artists', uri: '/aboutArtists' },
         { name: 'About RUHL', uri: '/ruhl' }
-    ]);
+    ];
 
     return (
         <header>
@@ -22,9 +22,17 @@ const NavBar = () => {
                 </NavLink>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav' className='justify-content-center text-grey'>
-                    <Nav className='mr-5'>
-                        {categories.map(c => <NavLink to={c.uri}><p className="link"> <a  href='#'> {c.name} </a></p></NavLink>)}
+                    
+                        {categories.map(c => <Nav className='mr-5'> <NavLink to={c.uri}><p className="link"> {c.name} </p></NavLink> </Nav>)}
+
+                    <Nav className="mr-5">
+                        <p className="link" > <NavDropdown title="Categories" id="basic-nav-dropdown" >
+                            <NavLink to={`/category/1`}><p className="link" >Female Lead</p></NavLink>
+                            <NavLink to={`/category/2`}><p className="link" >Male Lead</p></NavLink>
+                        </NavDropdown>
+                        </p>
                     </Nav>
+
                 </Navbar.Collapse>
                 <NavLink to={`/cart`}><CartWidget /></NavLink>
             </Navbar>

@@ -13,16 +13,25 @@
         margin: 5px;
         border-radius: 10px;
         font-weight: normal;
+        color:rgb(58, 17, 39);
     }
     a{
         text-decoration: none;
-        color:rgb(58, 17, 39);
     }
-    a:hover{
-        color:rgb(255, 255, 255);
+
+    #basic-nav-dropdown{
+        padding: 0 !important;
+
     }
-    link:hover{
-        border-bottom: 1px solid rgb(58, 17, 39);
-        color:rgb(255, 255, 255);
-    }
+    .dropdown-menu{
+        background: rgb(255, 184, 223);
+    } 
+}
+
+a:hover{
+    color:rgb(255, 255, 255);
+}
+link:hover{
+    border-bottom: 1px solid rgb(58, 17, 39);
+    color:rgb(255, 255, 255);
 }

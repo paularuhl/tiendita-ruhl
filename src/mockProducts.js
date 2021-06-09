@@ -14,63 +14,72 @@ const MockProducts = [
         title: "Periphery IV: Hail Stan",
         description: "Album by Periphery - 2019",
         price: 12.5,
-        pictureUrl: hailStanCover
+        pictureUrl: hailStanCover,
+        category: 2
     },
     {
         id: 2,
         title: "I Was Someone Else",
         description: "Album by Lydia - 2020",
         price: 15,
-        pictureUrl: someoneElseCover
+        pictureUrl: someoneElseCover,
+        category: 2
     },
     {
         id: 3,
         title: "Dark & Beautiful Secrets",
         description: "Album by Normandie - 2021",
         price: 12,
-        pictureUrl: secretsCover
+        pictureUrl: secretsCover,
+        category: 2
     },
     {
         id: 4,
         title: "Amorphous",
         description: "Album by Icon For Hire - 2021",
         price: 15,
-        pictureUrl: amorphousCover
+        pictureUrl: amorphousCover,
+        category: 1
     },
     {
         id: 5,
         title: "Declaration",
         description: "Album by Red - 2020",
         price: 15,
-        pictureUrl: declarationCover
+        pictureUrl: declarationCover,
+        category: 2
     },
     {
         id: 6,
         title: "Life Screams",
         description: "Album by Lacey Sturm - 2021",
         price: 15,
-        pictureUrl: lifeScreamsCover
+        pictureUrl: lifeScreamsCover,
+        category: 1
     },
     {
         id: 7,
         title: "Use Me",
         description: "Album by PVRIS - 2020",
         price: 15,
-        pictureUrl: useMeCover
+        pictureUrl: useMeCover,
+        category: 1
     },
     {
         id: 8,
         title: "DIVISIONS",
         description: "Album by STARSET - 2019",
         price: 15,
-        pictureUrl: divisionsCover
+        pictureUrl: divisionsCover,
+        category: 2
     },
     {
         id: 9,
         title: "Overcast",
         description: "Album by Almora Down - 2021",
         price: 15,
-        pictureUrl: overcastCover
+        pictureUrl: overcastCover,
+        category: 1
     }
 ]
 

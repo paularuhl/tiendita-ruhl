@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MockAboutRuhl from '../../mockAboutRuhl';
 import './AboutRuhl.scss';
 import spinnerGif from '../../img/spinner.gif';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import spotifyIcon from '@iconify-icons/fa-brands/spotify';
 import youtubeFilled from '@iconify-icons/ant-design/youtube-filled';
 import instagramFill from '@iconify-icons/akar-icons/instagram-fill';

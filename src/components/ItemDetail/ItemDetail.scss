@@ -1,4 +1,4 @@
-.item-detail-card{
+.item-detail-card {
     max-height: 500px;
     max-width: 700px;
     display: flex;
@@ -7,14 +7,14 @@
     text-align: right;
     background: rgb(204, 130, 171);
     padding-right:10px;
-    img{
+    img {
         max-width: 350px;
         width: 50%;
         padding: 5px;
     }
-    .detailInfo{
+    .detailInfo {
         padding: 5px;
-        h5{
+        h5 {
             padding-top: 10px;
             font-size: 2em;
             color: rgb(121, 59, 93);
@@ -22,10 +22,18 @@
                 color: rgb(58, 17, 39) !important;
             }
         }
-        p{
+        p {
             color:  rgb(121, 59, 93);
             padding: 5px;
             font-size: 1em;
+            
+        }
+        button {
+            border-radius: 5px;
+        }
+        .btn {
+        color: white !important;
+        background-color: rgb(121, 59, 93) !important;
         }
     }
 }

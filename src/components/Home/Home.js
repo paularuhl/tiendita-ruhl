@@ -4,6 +4,7 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import AboutRuhl from '../AboutRuhl/AboutRuhl';
 import './Home.scss';
+import Cart from '../Cart/Cart';
 
 const Home = ({ item }) => {
     return (
@@ -11,7 +12,10 @@ const Home = ({ item }) => {
         <Switch>
           <Route exact path='/'>
           <h1> Welcome to my curated Music Store </h1>
-          <ItemListContainer />
+          <ItemListContainer type={'albums'}/>
+          </Route>          
+          <Route exact path='/category/:category'>
+          <ItemListContainer type={'albums'} />
           </Route>
           <Route exact path='/aboutArtists'>
           <ItemListContainer type={'bands'}/>
@@ -21,6 +25,9 @@ const Home = ({ item }) => {
           </Route>
           <Route exact path='/ruhl'>
           <AboutRuhl />
+          </Route>
+          <Route exact path='/cart'>
+          <Cart />
           </Route>
         </Switch>
         </main>

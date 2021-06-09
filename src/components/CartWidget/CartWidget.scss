@@ -3,6 +3,7 @@
     min-width: 100px;
     height: 100%;
     background: rgb(121, 59, 93);
+    color:rgb(58, 17, 39);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -13,3 +14,7 @@
         padding: 0 4px 0 0;
       }
   }
+
+.cart:hover{
+    color:rgb(255, 255, 255);
+}
