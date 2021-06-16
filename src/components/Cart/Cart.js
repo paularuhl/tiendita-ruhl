@@ -1,8 +1,9 @@
 import React from 'react';
 import { useCartContext } from '../../Context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faFastBackward } from '@fortawesome/free-solid-svg-icons'
 import { Container, Row, Col, ListGroup } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom';
 import './Cart.scss'
 
 const Cart = () => {
@@ -20,9 +21,9 @@ const Cart = () => {
                                     <div className='item-detail-cart-card'>
                                         <img src={item.pictureUrl} width='100' alt={`cover of ${item.title}`} />
                                         <div className='inner-card'>
-                                            <h5>{item.title} | <span> ${item.price} | {item.quantity} </span></h5>
+                                            <h5>{item.quantity}x {item.title} <span>${item.price}</span></h5>
                                         </div>
-                                        <button class="btn-remove" onClick={() => removeItem(item)}>
+                                        <button type="button" className="btn" onClick={() => removeItem(item)}>
                                             <FontAwesomeIcon icon={faTrash} />
                                         </button>
                                     </div>
@@ -31,6 +32,11 @@ const Cart = () => {
                             ) : <ListGroup.Item >
                                 <div className='empty-cart-card'>
                                     <h5>El carrito se encuentra vacío por ahora...</h5>
+                                    <NavLink to={`/`}>
+                                        <button type="button" className="btn" >
+                                            <FontAwesomeIcon icon={faFastBackward} /> Volver al listado. 
+                                        </button>
+                                    </NavLink>
                                 </div>
                             </ListGroup.Item>}
                             <div>
@@ -41,7 +47,7 @@ const Cart = () => {
                 <Col md={3}>
                     <div className="inner-card">
                         <h5>Total - <span> $ {cart.totalItems} </span></h5>
-                        <button type="button" disabled={cart.length === 0}>Comprar</button>
+                        <button type="button" className="btn buy" disabled={cart.length === 0}>Comprar</button>
                     </div>
                 </Col>
             </Row>

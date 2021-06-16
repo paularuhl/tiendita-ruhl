@@ -25,11 +25,23 @@
             color: rgb(61, 33, 48) !important;
         }
     }
-    button {
-        border-radius: 5px;
+    .btn {
+        color: white;
+        background-color: rgb(121, 59, 93) !important;
+    }
+}
+
+.empty-cart-card{
+    h5 {
+        padding-top: 10px;
+        font-size: 1.5em;
+        color: rgb(122, 82, 104);
     }
     .btn {
-    color: white !important;
-    background-color: rgb(121, 59, 93) !important;
-    }
+        background-color: rgb(121, 59, 93) !important;
+        }
+}
+
+.btn {
+    color: white;
 }

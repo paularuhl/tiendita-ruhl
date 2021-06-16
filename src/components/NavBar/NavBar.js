@@ -3,9 +3,12 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.scss';
+import { useCartContext } from '../../Context/CartContext';
 
 const NavBar = () => {
 
+    const { cart } = useCartContext();
+    
     const categories = [
         { name: 'Music', uri: '/' },
         { name: 'About The Artists', uri: '/aboutArtists' },
@@ -34,7 +37,7 @@ const NavBar = () => {
                     </Nav>
 
                 </Navbar.Collapse>
-                <NavLink to={`/cart`}><CartWidget /></NavLink>
+                {cart.length > 0 ? <NavLink to={`/cart`}><CartWidget /></NavLink> : ''}
             </Navbar>
         </header>
     );
