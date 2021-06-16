@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusCircle, faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 import './ItemCount.scss'
 
-const ItemCount = ({ stock, initial, onAdd, message }) => {
+const ItemCount = ({ stock, initial, onAdd, message, item}) => {
 
     const [quantity, setQuantity] = useState(initial);
 
@@ -26,7 +26,7 @@ const ItemCount = ({ stock, initial, onAdd, message }) => {
                 </button>
             </div>
             <button className='btn'
-                onClick={() => onAdd(quantity)}> Agregar al carrito
+                onClick={() => onAdd(item, quantity)}> Agregar al carrito
             </button>
             <p>
                 {message}

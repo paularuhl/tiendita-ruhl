@@ -1,5 +1,35 @@
-p{
-    text-align: center;
-    color: red;
-    font-style: oblique;
+.item-detail-cart-card {
+    max-height: 500px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    background: rgb(209, 152, 184);
+    padding-right:10px;
+    img {
+        max-width: 350px;
+        width: 50%;
+        padding: 5px;
+    }
+
+}
+
+.inner-card{
+    padding: 5px;
+    h5 {
+        padding-top: 10px;
+        font-size: 2em;
+        color: rgb(122, 82, 104);
+        span{
+            color: rgb(61, 33, 48) !important;
+        }
+    }
+    button {
+        border-radius: 5px;
+    }
+    .btn {
+    color: white !important;
+    background-color: rgb(121, 59, 93) !important;
+    }
 }

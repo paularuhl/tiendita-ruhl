@@ -2,21 +2,27 @@ import React, {useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.scss';
 import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../../Context/CartContext';
 
 const ItemDetail = ({ item }) => {
     let stock = 5;
     let initialQuantity = 1;
 
-    let [message, setMessage] = useState('');
-    let [terminarCompra, setTerminarCompra] = useState(false);
-    let [itemCountResult, setItemCountResult] = useState();
+    const [quantity, setQuantity] = useState(0);    
+    const [message, setMessage] = useState('');
+    const [terminarCompra, setTerminarCompra] = useState(false);
+    const [itemCountResult, setItemCountResult] = useState();
+
+    const { addItem } = useCartContext();
 
     const changeMessage = (value) =>{
         setMessage(value);
     };
 
-    const addItems = (value, ok = true) => {
-        setItemCountResult(value);
+    const addItems = (item, quantity) => {
+        setQuantity(quantity)
+        setItemCountResult(item);
+        addItem(item, quantity);
         setTerminarCompra(true);
         // ok ? changeMessage(`Se agregaron ${value} productos al carrito`) : changeMessage(`No puede agregarse esa cantidad. Stock disponible: ${value}. Verificar.`);
     }
@@ -29,7 +35,7 @@ const ItemDetail = ({ item }) => {
                 <p>{item.description}</p>
                 {terminarCompra ? 
                     <NavLink to={`/cart`}> <button className='btn'>Termina tu compra</button>  </NavLink> 
-                     : <ItemCount stock={stock} initial={initialQuantity} onAdd={addItems} message={message} />}
+                     : <ItemCount stock={stock} initial={initialQuantity} onAdd={addItems} message={message} item={item} />}
             </div>
         </div>
     );

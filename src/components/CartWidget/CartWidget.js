@@ -1,9 +1,12 @@
 import React from 'react';
+import './CartWidget.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
-import './CartWidget.scss'
+import { useCartContext } from '../../Context/CartContext';
 
 const CartWidget = ({cantidadItems}) => {
+    const { cart } = useCartContext();
+
     cantidadItems = 1;
     return (
         <div className='cart link'>
@@ -11,7 +14,7 @@ const CartWidget = ({cantidadItems}) => {
            <FontAwesomeIcon className='cartIcon' icon={faShoppingCart}/> 
         </div>
         <div className='d-flex'>
-           {cantidadItems} 
+           {cart.reduce((acc, item) => acc + item.quantity, 0)}
         </div>
     </div>
         );
