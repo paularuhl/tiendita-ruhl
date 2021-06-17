@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import MockAboutRuhl from '../../mockAboutRuhl';
 import './AboutRuhl.scss';
 import spinnerGif from '../../img/spinner.gif';
 import { Icon } from '@iconify/react';
@@ -8,12 +7,6 @@ import youtubeFilled from '@iconify-icons/ant-design/youtube-filled';
 import instagramFill from '@iconify-icons/akar-icons/instagram-fill';
 import bxlInstagramAlt from '@iconify-icons/bx/bxl-instagram-alt';
 import { getFirestore } from '../../firebase';
-
-// const getItem = () => new Promise(
-//     (result, reject) => setTimeout(() => {
-//         return result(MockAboutRuhl);
-//     }, 2000)
-// );
 
 const AboutRuhl = () => {
     const [item, setItem] = useState([]);

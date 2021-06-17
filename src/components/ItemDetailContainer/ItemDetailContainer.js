@@ -2,16 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.scss';
 import ItemDetail from '../ItemDetail/ItemDetail';
-// import MockProducts from '../../mockProducts';
 import spinnerGif from '../../img/spinner.gif';
 import { getFirestore } from '../../firebase';
-
-// const getItem = (itemId) => new Promise(
-//     (result, reject) => setTimeout(() => {
-//         return result(MockProducts.find(x => x.id === parseInt(itemId)))
-//     }, 2000)
-        
-// );
 
 const ItemDetailContainer = () => {
     const { id } = useParams();

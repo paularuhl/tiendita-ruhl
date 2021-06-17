@@ -6,6 +6,7 @@ export const useCartContext = () => useContext(Context)
 
 const CartContext = ({defaultValue = [], children}) => {
 
+    // eslint-disable-next-line
     const [isInCart, setIsInCart] = useState(false)
     const [cart, setCart] = useState([])
 

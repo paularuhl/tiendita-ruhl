@@ -8,23 +8,20 @@ const ItemDetail = ({ item }) => {
     let stock = 5;
     let initialQuantity = 1;
 
+    // eslint-disable-next-line
     const [quantity, setQuantity] = useState(0);    
-    const [message, setMessage] = useState('');
     const [terminarCompra, setTerminarCompra] = useState(false);
+    // eslint-disable-next-line
     const [itemCountResult, setItemCountResult] = useState();
 
     const { addItem } = useCartContext();
 
-    const changeMessage = (value) =>{
-        setMessage(value);
-    };
 
     const addItems = (item, quantity) => {
         setQuantity(quantity)
         setItemCountResult(item);
         addItem(item, quantity);
         setTerminarCompra(true);
-        // ok ? changeMessage(`Se agregaron ${value} productos al carrito`) : changeMessage(`No puede agregarse esa cantidad. Stock disponible: ${value}. Verificar.`);
     }
 
     return (
@@ -35,7 +32,7 @@ const ItemDetail = ({ item }) => {
                 <p>{item.description}</p>
                 {terminarCompra ? 
                     <NavLink to={`/cart`}> <button className='btn'>Termina tu compra</button>  </NavLink> 
-                     : <ItemCount stock={stock} initial={initialQuantity} onAdd={addItems} message={message} item={item} />}
+                     : <ItemCount stock={stock} initial={initialQuantity} onAdd={addItems} item={item} />}
             </div>
         </div>
     );
