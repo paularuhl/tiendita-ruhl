@@ -52,7 +52,7 @@ const MockProducts = [
     {
         id: 6,
         title: "Life Screams",
-        description: "Album by Lacey Sturm - 2021",
+        description: "Album by Lacey Sturm - 2016",
         price: 15,
         pictureUrl: lifeScreamsCover,
         category: 1
