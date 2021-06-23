@@ -2,7 +2,7 @@ import "firebase/firestore";
 import firebase from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCzE_sJRa-OZeGfrDDuOahp18hsbX1XomE",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: "top-picks-ecb7e.firebaseapp.com",
     projectId: "top-picks-ecb7e",
     storageBucket: "top-picks-ecb7e.appspot.com",
