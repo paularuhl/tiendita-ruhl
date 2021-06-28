@@ -2,7 +2,9 @@
 👩🏻‍💻 Proyecto de E-Commerce para el curso de ReactJs de coderhouse.
 
 Creado con create-react-app. 
+
 Instalar dependencias con npm i
+
 Correr con npm start para iniciarlo en localhost:3000.
 
 
