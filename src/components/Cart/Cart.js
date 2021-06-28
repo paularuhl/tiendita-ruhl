@@ -34,14 +34,11 @@ const Cart = () => {
         }
         
         db.collection('order').add(newOrder).then((doc) => {
-            debugger;
             setOrderId(doc.id);
             setConfirmation(true);
         }).catch((e) => {console.log(e)});
     
         if (confirmation) {
-            debugger;
-            console.log(`Se creó la orden ${orderId}`);
             clear();
             setConfirmation(false);
         }
