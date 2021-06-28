@@ -87,7 +87,7 @@ const Cart = () => {
                         <h5>Total - <span> $ {cart.totalItems} </span></h5>
                         <button type="button" className="btn buy" disabled={cart.length === 0} onClick={handlePurchase}>Comprar</button>
                     </div>
-                    {showForm ? <Form createOrder={createOrder} /> : null}
+                    {showForm ? <Form createOrder={createOrder} orderId={orderId} /> : null}
                 </Col>
             </Row>
         </Container>
