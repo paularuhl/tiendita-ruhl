@@ -50,8 +50,8 @@ const Cart = () => {
                 <Col md={9}>
                     <ListGroup>
                         {cart.length > 0 ?
-                            cart.map((item) => (
-                                <ListGroup.Item >
+                            cart.map((item) => 
+                                 <ListGroup.Item >
                                     <div className='item-detail-cart-card'>
                                         <img src={item.pictureUrl} width='100' alt={`cover of ${item.title}`} />
                                         <div className='inner-card'>
@@ -62,7 +62,6 @@ const Cart = () => {
                                         </button>
                                     </div>
                                 </ListGroup.Item>
-                            )
                             ) : <ListGroup.Item >
                                 <div className='empty-cart-card'>
                                     <h5>El carrito se encuentra vacío por ahora...</h5>

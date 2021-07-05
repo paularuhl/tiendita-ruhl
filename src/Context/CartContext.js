@@ -7,15 +7,15 @@ export const useCartContext = () => useContext(Context)
 const CartContext = ({defaultValue = [], children}) => {
 
     // eslint-disable-next-line
-    const [isInCart, setIsInCart] = useState(false)
     const [cart, setCart] = useState([])
     
     const quantity = () => cart.reduce((acc, item) => acc + item.quantity, 0);
     const totalItems = () => cart.reduce((acc, item) => acc + (item.quantity * item.price), 0);
 
     const addItem = (item, quantity) => {
-        const itemInCart = cart.find((x) => x.id === item.id)
-        setIsInCart(true)
+
+        const itemInCart = cart.find((i) => i.artistId === item.artistId);
+
         if(itemInCart){
             itemInCart.quantity += quantity
             setCart([...cart])
@@ -29,8 +29,6 @@ const CartContext = ({defaultValue = [], children}) => {
             cart.findIndex((item) => item.id === id), 1
         )
         setCart([...cart]);
-        if(cart.length === 0)
-            setIsInCart(false)
     }
 
     const clear = () => setCart(defaultValue);

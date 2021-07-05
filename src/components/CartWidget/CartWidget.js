@@ -5,7 +5,7 @@ import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from '../../Context/CartContext';
 
 const CartWidget = ({cantidadItems}) => {
-    const { cart } = useCartContext();
+    const { quantity } = useCartContext();
 
     return (
         <div className='cart link'>
@@ -13,7 +13,7 @@ const CartWidget = ({cantidadItems}) => {
            <FontAwesomeIcon className='cartIcon' icon={faShoppingCart}/> 
         </div>
         <div className='d-flex'>
-           {cart.quantity()}
+           {quantity()}
         </div>
     </div>
         );
