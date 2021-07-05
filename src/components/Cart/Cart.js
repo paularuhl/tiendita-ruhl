@@ -16,8 +16,7 @@ const Cart = () => {
     const [showForm, setShowForm] = useState(false);
     const [orderId, setOrderId] = useState('');
     const [confirmation, setConfirmation] = useState(false);
-    const { cart, removeItem, clear } = useCartContext();
-    cart.totalItems = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+    const { cart, removeItem, clear, totalItems } = useCartContext();
     
 
     const handlePurchase = () => setShowForm(true);
@@ -30,7 +29,7 @@ const Cart = () => {
             buyer,
             cart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
-            total: cart.totalItems
+            total: totalItems()
         }
         
         db.collection('order').add(newOrder).then((doc) => {
@@ -81,7 +80,7 @@ const Cart = () => {
                 </Col>
                 <Col md={3}>
                     <div className="inner-card">
-                        <h5>Total - <span> $ {cart.totalItems} </span></h5>
+                        <h5>Total - <span> $ {totalItems()} </span></h5>
                         <button type="button" className="btn buy" disabled={cart.length === 0} onClick={handlePurchase}>Comprar</button>
                     </div>
                     {showForm ? <Form createOrder={createOrder} orderId={orderId} /> : null}

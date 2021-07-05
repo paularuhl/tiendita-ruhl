@@ -9,6 +9,9 @@ const CartContext = ({defaultValue = [], children}) => {
     // eslint-disable-next-line
     const [isInCart, setIsInCart] = useState(false)
     const [cart, setCart] = useState([])
+    
+    const quantity = () => cart.reduce((acc, item) => acc + item.quantity, 0);
+    const totalItems = () => cart.reduce((acc, item) => acc + (item.quantity * item.price), 0);
 
     const addItem = (item, quantity) => {
         const itemInCart = cart.find((x) => x.id === item.id)
@@ -33,7 +36,7 @@ const CartContext = ({defaultValue = [], children}) => {
     const clear = () => setCart(defaultValue);
 
     return(
-        <Context.Provider value={{ cart, addItem, removeItem, clear }}>
+        <Context.Provider value={{ cart, addItem, removeItem, clear, totalItems, quantity }}>
             {children}
         </Context.Provider>
     );
