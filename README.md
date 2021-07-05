@@ -8,4 +8,4 @@ Instalar dependencias con npm i
 Correr con npm start para iniciarlo en localhost:3000.
 
 
-![navegabilidad](https://raw.githubusercontent.com/paularuhl/tiendita-ruhl/main/top-picks-nav-test.gif "Navegabilidad Gif")
+![navegabilidad](https://raw.githubusercontent.com/paularuhl/tiendita-ruhl/main/top-picks-nav-test-final.gif "Navegabilidad FINAL, Gif")

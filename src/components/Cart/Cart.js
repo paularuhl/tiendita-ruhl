@@ -35,6 +35,7 @@ const Cart = () => {
         db.collection('order').add(newOrder).then((doc) => {
             setOrderId(doc.id);
             setConfirmation(true);
+            clear();
         }).catch((e) => {console.log(e)});
     
         if (confirmation) {
